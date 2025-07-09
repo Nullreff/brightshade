@@ -14,7 +14,7 @@ outputs = { self, nixpkgs, flake-utils }:
     in
     {
       devShells.default = pkgs.mkShell rec {
-        packages          = with pkgs; [ z3 ];
+        packages          = with pkgs; [ alsa-lib.dev ];
         buildInputs       = with pkgs; [ clang llvmPackages.bintools rustup ];
         nativeBuildInputs = [ pkgs.pkg-config ];
 
